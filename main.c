@@ -8,6 +8,6 @@ int main(int argc, char *argv[])
 	fclose(in);
 
 	FILE *out = fopen(argv[2], "w");
-	fprintf(out, "%i", a + b);
+	fprintf(out, "%i\n", a + b);
 	fclose(out);
 }
