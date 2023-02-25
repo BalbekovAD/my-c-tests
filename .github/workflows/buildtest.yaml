@@ -1,9 +1,7 @@
 name: CI/CD
 
 on:
-  pull_request:
-    branches: [ feedback ]
-    types: [ opened, reopened ]
+  [workflow_dispatch]
   
 env:
   COMPILER: "clang"
@@ -22,7 +20,6 @@ defaults:
 
 jobs:
   buildtest:
-    if: (github.actor == 'RonoveRaum') || (github.run_number < 7)
     strategy:
       max-parallel: 1
       fail-fast: true
